@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AerScan — Light in, answers out.</title>
-  <meta name="description" content="From autonomous flights to LiDAR/RGB deliverables — AerScan processes, validates, and routes results where they matter." />
+  <title>AerScan Platform — Coming 2026</title>
+  <meta name="description" content="AerScan: an autonomous scanning platform arriving 2026. Join the list to get early access updates." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind config MUST be on tailwind.config and BEFORE the CDN script -->
+  <!-- Tailwind config (must be before CDN script) -->
   <script>
     tailwind = window.tailwind || {};
     tailwind.config = {
@@ -26,12 +26,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root {
-      --bg:#0B1220; --surface:#0F172A; --ink:#F4F7FB;
-      --beam-cyan:#22D3EE; --beam-violet:#7C3AED;
-    }
+    :root { --bg:#0B1220; --surface:#0F172A; --ink:#F4F7FB; }
     body { background: var(--bg); color: var(--ink); font-family: Inter, system-ui, sans-serif; }
-    /* hero beam sweep (CSS-only) */
     @keyframes sweep {
       0%   { clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }
       40%  { clip-path: polygon(5% 95%, 20% 80%, 40% 60%, 55% 45%); }
@@ -46,7 +42,6 @@
   <header class="sticky top-0 z-40 backdrop-blur bg-[rgba(11,18,32,.7)]">
     <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <!-- Beam-in-Box Logo -->
         <svg class="h-8 w-8" viewBox="0 0 64 64" fill="none" aria-label="AerScan logo">
           <rect x="8" y="8" width="48" height="48" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-width="2"></rect>
           <defs>
@@ -60,13 +55,14 @@
         <span class="text-lg font-semibold tracking-tight">AerScan</span>
       </div>
       <nav class="hidden md:flex items-center gap-6 text-white/80 text-sm">
-        <a href="#datasets" class="hover:text-white">Datasets</a>
+        <a href="#platform" class="hover:text-white">Platform</a>
         <a href="#features" class="hover:text-white">Features</a>
-        <a href="#assessment" class="hover:text-white">Assessment</a>
-        <a href="#docs" class="hover:text-white">Docs</a>
+        <a href="#roadmap" class="hover:text-white">Roadmap</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+        <a href="mailto:info@aerscan.com" class="hover:text-white">Contact</a>
       </nav>
-      <a href="#assessment" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-400 px-4 py-2 text-sm font-medium shadow-lg ring-1 ring-white/10">
-        Book a site assessment
+      <a href="#notify" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-400 px-4 py-2 text-sm font-medium shadow-lg ring-1 ring-white/10">
+        Get updates
         <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24">
           <path d="M5 12h14M13 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -74,8 +70,8 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="relative overflow-hidden">
+  <!-- HERO (Coming 2026) -->
+  <section id="platform" class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10">
       <div class="absolute -top-40 left-1/2 h-96 w-[70rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-violet-600/20 to-cyan-400/20 blur-3xl"></div>
       <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
@@ -86,54 +82,40 @@
         <div class="mb-4 flex flex-wrap gap-2">
           <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-sm text-white/80 ring-1 ring-white/10">
             <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9" stroke-width="2"/><path d="M12 3v9l3 3" stroke-width="2" stroke-linecap="round"/></svg>
-            LiDAR • RGB • Thermal
+            Private beta • 2026
           </span>
           <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-sm text-white/80 ring-1 ring-white/10">
             <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18M5 6l14 12" stroke-width="2" stroke-linecap="round"/></svg>
-            Managed grid
-          </span>
-          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-sm text-white/80 ring-1 ring-white/10">
-            <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"/></svg>
-            SLA-backed ops
+            Platform preview
           </span>
         </div>
 
         <h1 class="font-space text-4xl sm:text-5xl font-semibold leading-tight tracking-tight">
-          Light in, <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-300">answers out</span>.
+          The AerScan platform<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-300">arrives in 2026</span>.
         </h1>
         <p class="mt-4 text-white/80 text-lg max-w-xl">
-          From autonomous flights to LiDAR/RGB deliverables—<span class="font-semibold text-white">AerScan</span> processes, validates, and routes the results where they matter.
+          We’re building an autonomous scanning platform that turns flights into verified LiDAR/RGB deliverables—ready for your systems. Join the list to get progress updates and early access invites.
         </p>
 
-        <div class="mt-8 flex flex-wrap items-center gap-3">
-          <a href="#datasets" class="inline-flex items-center gap-2 rounded-xl bg-white text-[#0B1220] px-5 py-3 text-sm font-medium shadow-lg hover:bg-white/90">
-            See sample datasets
-            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="#0B1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#assessment" class="inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium ring-1 ring-white/20 text-white hover:bg-white/5">
-            Book a site assessment
-          </a>
-        </div>
-
-        <div class="mt-10 grid grid-cols-3 gap-6 max-w-lg">
-          <div><div class="text-2xl font-semibold tracking-tight">±3 cm</div><div class="text-white/60 text-sm">Ground truthing*</div></div>
-          <div><div class="text-2xl font-semibold tracking-tight">T+10 min</div><div class="text-white/60 text-sm">First insight*</div></div>
-          <div><div class="text-2xl font-semibold tracking-tight">99.9%</div><div class="text-white/60 text-sm">Task reliability*</div></div>
-        </div>
-        <p class="mt-2 text-[11px] text-white/50">*Sample placeholders—swap with your real metrics at launch.</p>
-
-        <div class="mt-8 flex flex-wrap items-center gap-3 text-sm text-white/70">
-          <span>Works with</span>
-          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">DJI</span>
-          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Skydio</span>
-          <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 ring-1 ring-white/10">Open UTM</span>
-        </div>
+        <!-- Notify form -->
+        <form id="notify" class="mt-8 flex flex-col sm:flex-row gap-3 max-w-xl" onsubmit="return window.handleSignup(event)">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" name="email" required type="email" placeholder="you@company.com"
+                 class="w-full rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                 aria-label="Your email" />
+          <button type="submit"
+                  class="shrink-0 inline-flex items-center justify-center gap-2 rounded-xl bg-white text-[#0B1220] px-5 py-3 text-sm font-medium shadow-lg hover:bg-white/90">
+            Notify me
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="#0B1220" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p id="status" class="text-sm text-white/70"></p>
+        </form>
+        <p class="mt-2 text-[11px] text-white/50">No spam. We’ll email only major milestones and beta opportunities.</p>
       </div>
 
-      <!-- HERO VISUAL -->
+      <!-- Visual -->
       <div class="relative">
         <div class="relative mx-auto aspect-[4/3] w-full max-w-xl rounded-3xl bg-[#0F172A] ring-1 ring-white/10 shadow-2xl overflow-hidden">
-          <!-- grid underlay -->
           <svg class="absolute inset-0 h-full w-full" viewBox="0 0 400 300">
             <defs>
               <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -143,7 +125,6 @@
             <rect width="100%" height="100%" fill="url(#grid)"></rect>
           </svg>
 
-          <!-- dock square logo bottom-left -->
           <div class="absolute left-6 bottom-6">
             <svg class="h-14 w-14" viewBox="0 0 64 64" fill="none" aria-hidden="true">
               <rect x="8" y="8" width="48" height="48" rx="10" fill="#0F172A" stroke="#22D3EE" stroke-width="2"></rect>
@@ -154,7 +135,6 @@
             </svg>
           </div>
 
-          <!-- animated beam sweep -->
           <div class="absolute left-8 bottom-8 right-8 top-8 beam-anim">
             <div class="absolute inset-0 rotate-[35deg] translate-y-24">
               <div class="h-2 w-full bg-gradient-to-r from-violet-500 via-cyan-400 to-transparent blur-[2px]"></div>
@@ -162,151 +142,109 @@
             </div>
           </div>
 
-          <!-- result panel -->
           <div class="absolute right-6 top-6 w-[42%] rounded-xl bg-white/5 p-4 ring-1 ring-white/10 backdrop-blur">
-            <div class="flex items-center gap-2 text-sm text-white/80">
+            <div class="text-sm text-white/80 flex items-center gap-2">
               <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" stroke-width="2"/><path d="M3 11h18" stroke-width="2"/></svg>
-              Layers
+              Planned outputs
             </div>
-            <div class="mt-3 grid grid-cols-3 gap-2 text-[11px] text-white/80">
-              <div class="rounded-md bg-[#0B1220] p-2 ring-1 ring-white/10">
-                <div class="flex items-center gap-1 text-white/60">
-                  <svg class="h-3 w-3 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9" stroke-width="2"/><path d="M12 3v9l3 3" stroke-width="2" stroke-linecap="round"/></svg>
-                  LiDAR
-                </div>
-                <div class="mt-1 h-1.5 w-full rounded bg-gradient-to-r from-violet-500 to-cyan-400"></div>
-              </div>
-              <div class="rounded-md bg-[#0B1220] p-2 ring-1 ring-white/10">
-                <div class="flex items-center gap-1 text-white/60">
-                  <svg class="h-3 w-3 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18" stroke-width="2"/></svg>
-                  RGB
-                </div>
-                <div class="mt-1 h-1.5 w-full rounded bg-gradient-to-r from-cyan-400 to-violet-500"></div>
-              </div>
-              <div class="rounded-md bg-[#0B1220] p-2 ring-1 ring-white/10">
-                <div class="flex items-center gap-1 text-white/60">
-                  <svg class="h-3 w-3 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke-width="2"/></svg>
-                  QA
-                </div>
-                <div class="mt-1 h-1.5 w-1/2 rounded bg-white/30"></div>
-              </div>
-            </div>
-            <div class="mt-3 rounded-lg bg-[#0B1220] p-3 ring-1 ring-white/10">
-              <div class="text-[11px] text-white/60">Change over ground</div>
-              <div class="mt-1 h-24 w-full rounded bg-gradient-to-t from-[#0B1220] via-violet-600/20 to-cyan-400/30"></div>
-            </div>
+            <ul class="mt-3 space-y-2 text-[12px] text-white/80">
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-cyan-300"></span>LiDAR point clouds (LAS/LAZ)</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-violet-400"></span>Orthomosaics & DSM/DTM</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-white/70"></span>Change detection & QA reports</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURES -->
+  <!-- FEATURES (planned) -->
   <section id="features" class="mx-auto max-w-7xl px-6 py-16 lg:py-24">
-    <div class="max-w-2xl">
-      <h2 class="text-2xl font-semibold tracking-tight">From dock to decision</h2>
-      <p class="mt-2 text-white/70">Schedule flights, ingest LiDAR/RGB, validate against control, and route outputs to your systems—automatically.</p>
+    <div class="max-w-3xl">
+      <h2 class="text-2xl font-semibold tracking-tight">What the platform will include</h2>
+      <p class="mt-2 text-white/70">Scope is evolving. Here’s the planned capability set for private beta.</p>
     </div>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="group relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
-        <div class="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-gradient-to-br from-violet-600/20 to-cyan-400/20 blur-2xl group-hover:scale-125 transition"></div>
-        <svg class="h-6 w-6 icon-stroke" fill="none" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke-width="2"/></svg>
-        <h3 class="mt-3 text-lg font-semibold">Box</h3>
-        <p class="mt-2 text-white/70 text-sm leading-relaxed">Autonomous dock with scheduled flights, safe launch windows, and health checks.</p>
+      <div class="relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
+        <h3 class="text-lg font-semibold">Box (Autonomous dock)</h3>
+        <p class="mt-2 text-white/70 text-sm">Scheduled flights, safe launch windows, weather/health checks, remote ops.</p>
       </div>
-      <div class="group relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
-        <div class="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-gradient-to-br from-violet-600/20 to-cyan-400/20 blur-2xl group-hover:scale-125 transition"></div>
-        <svg class="h-6 w-6 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18M5 6l14 12" stroke-width="2" stroke-linecap="round"/></svg>
-        <h3 class="mt-3 text-lg font-semibold">Grid</h3>
-        <p class="mt-2 text-white/70 text-sm leading-relaxed">Fleet management, airspace context, geofences, and live telemetry.</p>
+      <div class="relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
+        <h3 class="text-lg font-semibold">Grid (Fleet & airspace)</h3>
+        <p class="mt-2 text-white/70 text-sm">Fleet manager, geofences, NOTAM/airspace context, telemetry and audit trails.</p>
       </div>
-      <div class="group relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
-        <div class="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-gradient-to-br from-violet-600/20 to-cyan-400/20 blur-2xl group-hover:scale-125 transition"></div>
-        <svg class="h-6 w-6 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M3 15l6-6 4 4 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-width="2"/></svg>
-        <h3 class="mt-3 text-lg font-semibold">Cloud</h3>
-        <p class="mt-2 text-white/70 text-sm leading-relaxed">Processing, QA/QC, deliverables, and webhooks to GIS, BIM, and storage.</p>
+      <div class="relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
+        <h3 class="text-lg font-semibold">Cloud (Processing & QA)</h3>
+        <p class="mt-2 text-white/70 text-sm">LiDAR/RGB ingest, control checks, change detection, deliverables packaging.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- DATASETS -->
-  <section id="datasets" class="mx-auto max-w-7xl px-6 py-16 lg:py-24">
-    <div class="max-w-2xl">
-      <h2 class="text-2xl font-semibold tracking-tight">Sample datasets</h2>
-      <p class="mt-2 text-white/70">Explore representative deliverables. Replace these with your real links when ready.</p>
-    </div>
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="group rounded-2xl bg-white/5 p-5 ring-1 ring-white/10 shadow-lg">
-        <div class="aspect-[4/3] w-full rounded-xl bg-[#0F172A] ring-1 ring-white/10 flex items-center justify-center">
-          <div class="h-16 w-16 rounded-xl bg-gradient-to-br from-violet-600/30 to-cyan-400/30 ring-1 ring-white/10"></div>
-        </div>
-        <h3 class="mt-4 text-lg font-semibold">Substation LiDAR</h3>
-        <p class="mt-1 text-sm text-white/70">High-density point cloud with vegetation & clearance checks.</p>
-        <a href="#" class="mt-3 inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-cyan-200">
-          View viewer demo
-          <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
+        <h3 class="text-lg font-semibold">Studio (Dashboards & alerts)</h3>
+        <p class="mt-2 text-white/70 text-sm">Viewer, annotations, thresholds, incident alerts, scheduled reports.</p>
       </div>
-      <div class="group rounded-2xl bg-white/5 p-5 ring-1 ring-white/10 shadow-lg">
-        <div class="aspect-[4/3] w-full rounded-xl bg-[#0F172A] ring-1 ring-white/10 flex items-center justify-center">
-          <div class="h-16 w-16 rounded-xl bg-gradient-to-br from-violet-600/30 to-cyan-400/30 ring-1 ring-white/10"></div>
-        </div>
-        <h3 class="mt-4 text-lg font-semibold">Construction Progress</h3>
-        <p class="mt-1 text-sm text-white/70">Weekly RGB orthos & volumetrics with change detection.</p>
-        <a href="#" class="mt-3 inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-cyan-200">
-          View viewer demo
-          <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
+        <h3 class="text-lg font-semibold">Integrations</h3>
+        <p class="mt-2 text-white/70 text-sm">Webhooks & exports to ArcGIS, QGIS, BIM, storage buckets, and APIs.</p>
       </div>
-      <div class="group rounded-2xl bg-white/5 p-5 ring-1 ring-white/10 shadow-lg">
-        <div class="aspect-[4/3] w-full rounded-xl bg-[#0F172A] ring-1 ring-white/10 flex items-center justify-center">
-          <div class="h-16 w-16 rounded-xl bg-gradient-to-br from-violet-600/30 to-cyan-400/30 ring-1 ring-white/10"></div>
-        </div>
-        <h3 class="mt-4 text-lg font-semibold">Solar Farm IR</h3>
-        <p class="mt-1 text-sm text-white/70">Thermal anomalies and string-level performance flags.</p>
-        <a href="#" class="mt-3 inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-cyan-200">
-          View viewer demo
-          <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="relative overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-lg">
+        <h3 class="text-lg font-semibold">Security & Compliance</h3>
+        <p class="mt-2 text-white/70 text-sm">Role-based access, audit logs, and compliance-friendly data handling.</p>
       </div>
     </div>
   </section>
 
-  <!-- ASSESSMENT -->
-  <section id="assessment" class="mx-auto max-w-7xl px-6 py-16 lg:py-24">
-    <div class="max-w-2xl">
-      <h2 class="text-2xl font-semibold tracking-tight">Book a site assessment</h2>
-      <p class="mt-2 text-white/70">Tell us about your site and objectives. We'll follow up with flight plan options and a sample timeline.</p>
+  <!-- ROADMAP -->
+  <section id="roadmap" class="mx-auto max-w-7xl px-6 py-16 lg:py-24">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl font-semibold tracking-tight">Roadmap (high level)</h2>
+      <p class="mt-2 text-white/70">Milestones are directional and may change.</p>
     </div>
-    <form class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
-        <label class="block text-sm text-white/70">Name</label>
-        <input placeholder="Jane Doe" class="mt-2 w-full rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+    <ol class="mt-8 space-y-4">
+      <li class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+        <div class="text-sm text-white/60">2024–2025</div>
+        <div class="font-semibold mt-1">R&D and field prototyping</div>
+        <p class="text-white/70 text-sm mt-1">Flight orchestration, ingest pipeline, and QA scaffolding.</p>
+      </li>
+      <li class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+        <div class="text-sm text-white/60">Early 2026</div>
+        <div class="font-semibold mt-1">Private beta (invite-only)</div>
+        <p class="text-white/70 text-sm mt-1">Limited deployments with energy/construction partners.</p>
+      </li>
+      <li class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+        <div class="text-sm text-white/60">Mid 2026</div>
+        <div class="font-semibold mt-1">Pilot programs</div>
+        <p class="text-white/70 text-sm mt-1">Wider partner access, integrations, and SLA hardening.</p>
+      </li>
+      <li class="rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+        <div class="text-sm text-white/60">Late 2026</div>
+        <div class="font-semibold mt-1">Public launch</div>
+        <p class="text-white/70 text-sm mt-1">Self-serve onboarding and expanded device support.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto max-w-7xl px-6 py-16 lg:py-24">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl font-semibold tracking-tight">FAQ</h2>
+    </div>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+        <h3 class="font-semibold">What is AerScan?</h3>
+        <p class="text-white/70 text-sm mt-1">An autonomous scanning platform—dock orchestration, fleet & airspace, processing, QA, and deliverables.</p>
       </div>
-      <div>
-        <label class="block text-sm text-white/70">Email</label>
-        <input type="email" placeholder="jane@company.com" class="mt-2 w-full rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+      <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+        <h3 class="font-semibold">Will it support DJI & Skydio?</h3>
+        <p class="text-white/70 text-sm mt-1">That’s the plan for private beta. We’ll share device compatibility as we progress.</p>
       </div>
-      <div>
-        <label class="block text-sm text-white/70">Company</label>
-        <input placeholder="Acme Energy" class="mt-2 w-full rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+      <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+        <h3 class="font-semibold">Pricing?</h3>
+        <p class="text-white/70 text-sm mt-1">TBD during beta. Expect tiers for Box, Grid, and Cloud usage.</p>
       </div>
-      <div>
-        <label class="block text-sm text-white/70">Site location</label>
-        <input placeholder="City, State or coordinates" class="mt-2 w-full rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+      <div class="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+        <h3 class="font-semibold">How do I get early access?</h3>
+        <p class="text-white/70 text-sm mt-1">Join the list above or email <a class="underline hover:text-white" href="mailto:info@aerscan.com">info@aerscan.com</a> with your use-case.</p>
       </div>
-      <div class="md:col-span-2">
-        <label class="block text-sm text-white/70">Objectives</label>
-        <textarea rows="5" placeholder="e.g., weekly progress, change detection, clearance study, thermal sweep…" class="mt-2 w-full rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
-      </div>
-      <div class="md:col-span-2 flex items-center justify-between">
-        <div class="text-xs text-white/50">By submitting, you agree to our terms and privacy policy.</div>
-        <button type="button" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-400 px-5 py-3 text-sm font-medium shadow-lg ring-1 ring-white/10">
-          Submit request
-          <svg class="h-4 w-4 icon-stroke" fill="none" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-    </form>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -320,12 +258,51 @@
         <span class="text-white/80 text-sm">© <script>document.write(new Date().getFullYear())</script> AerScan</span>
       </div>
       <div class="flex items-center gap-6 text-sm text-white/70">
-        <a id="docs" href="#" class="hover:text-white">Security</a>
-        <a href="#" class="hover:text-white">Compliance</a>
-        <a href="#" class="hover:text-white">Docs</a>
-        <a href="#" class="hover:text-white">Status</a>
+        <a href="mailto:info@aerscan.com" class="hover:text-white">info@aerscan.com</a>
+        <a href="#notify" class="hover:text-white">Get updates</a>
+        <a href="#roadmap" class="hover:text-white">Roadmap</a>
       </div>
     </div>
   </footer>
+
+  <!-- Lightweight signup handler -->
+  <script>
+    // If you set FORM_ENDPOINT to a Formspree endpoint (e.g., "https://formspree.io/f/xxxxxx"),
+    // the form will POST there. Otherwise it falls back to a mailto:.
+    const FORM_ENDPOINT = ""; // <-- add your endpoint or leave blank for mailto fallback.
+
+    window.handleSignup = async function(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const status = document.getElementById('status');
+      status.textContent = "";
+
+      if (!email) return false;
+
+      if (FORM_ENDPOINT){
+        try{
+          const res = await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            headers: { "Accept":"application/json", "Content-Type":"application/json" },
+            body: JSON.stringify({ email })
+          });
+          if (res.ok){
+            status.textContent = "Thanks! You’re on the list.";
+            status.className = "text-sm text-green-300 mt-2";
+            e.target.reset();
+          } else {
+            throw new Error("Network error");
+          }
+        } catch(err){
+          status.textContent = "Couldn’t submit. Emailing instead…";
+          status.className = "text-sm text-yellow-300 mt-2";
+          window.location.href = `mailto:info@aerscan.com?subject=AerScan%20Updates&body=Please%20add%20me%20to%20the%20list.%0AEmail%3A%20${encodeURIComponent(email)}`;
+        }
+      } else {
+        window.location.href = `mailto:info@aerscan.com?subject=AerScan%20Updates&body=Please%20add%20me%20to%20the%20list.%0AEmail%3A%20${encodeURIComponent(email)}`;
+      }
+      return false;
+    }
+  </script>
 </body>
 </html>
